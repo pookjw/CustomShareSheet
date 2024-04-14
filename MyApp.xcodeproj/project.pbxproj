@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4FBE358F2BCC3F7900EC0C06 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FBE358E2BCC3F7900EC0C06 /* QuartzCore.framework */; };
 		4FE9C78D2BC8D04B00B09E26 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4FE9C78C2BC8D04B00B09E26 /* AppDelegate.mm */; };
 		4FE9C7902BC8D04B00B09E26 /* SceneDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4FE9C78F2BC8D04B00B09E26 /* SceneDelegate.mm */; };
 		4FE9C7982BC8D04C00B09E26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FE9C7972BC8D04C00B09E26 /* Assets.xcassets */; };
@@ -28,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4FBE358E2BCC3F7900EC0C06 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		4FE9C7882BC8D04B00B09E26 /* MyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FE9C78B2BC8D04B00B09E26 /* AppDelegate.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = AppDelegate.hpp; sourceTree = "<group>"; };
 		4FE9C78C2BC8D04B00B09E26 /* AppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 			files = (
 				4FE9C8002BCBF73300B09E26 /* LinkPresentation.framework in Frameworks */,
 				4FE9C7B12BC940CE00B09E26 /* CoreGraphics.framework in Frameworks */,
+				4FBE358F2BCC3F7900EC0C06 /* QuartzCore.framework in Frameworks */,
 				4FE9C7A62BC8F50B00B09E26 /* UIKit.framework in Frameworks */,
 				4FE9C7FE2BCBBE7C00B09E26 /* Symbols.framework in Frameworks */,
 				4FE9C8052BCBFA4D00B09E26 /* UniformTypeIdentifiers.framework in Frameworks */,
@@ -115,6 +118,7 @@
 		4FE9C7A42BC8F50B00B09E26 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4FBE358E2BCC3F7900EC0C06 /* QuartzCore.framework */,
 				4FE9C8042BCBFA4D00B09E26 /* UniformTypeIdentifiers.framework */,
 				4FE9C7FF2BCBF73300B09E26 /* LinkPresentation.framework */,
 				4FE9C7FD2BCBBE7C00B09E26 /* Symbols.framework */,
