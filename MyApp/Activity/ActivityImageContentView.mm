@@ -194,6 +194,8 @@ __attribute__((objc_direct_members))
                                   options:transitionOptions];
     }
     
+    selectedImageView.alpha = copy.forPresenting ? 0.f : 1.f;
+    
     UIImageView *imageView = self.imageView;
     
     if ((![oldContentConfiguration.imageName isEqualToString:copy.imageName]) || (oldContentConfiguration.forPresenting != copy.forPresenting)) {
