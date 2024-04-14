@@ -74,7 +74,7 @@ __attribute__((objc_direct_members))
     NSIndexPath *indexPath = [NSIndexPath indexPathForItem:presentingIndex inSection:0];
     
     if (presentingIndex != NSNotFound) {
-        ((void (*)(id, SEL, id, BOOL, NSUInteger, BOOL))objc_msgSend)(collectionView, sel_registerName("_selectItemAtIndexPath:animated:scrollPosition:notifyDelegate:"), indexPath, NO, UICollectionViewScrollPositionCenteredHorizontally, YES);
+        ((void (*)(id, SEL, id, BOOL, NSUInteger, BOOL))objc_msgSend)(collectionView, sel_registerName("_selectItemAtIndexPath:animated:scrollPosition:notifyDelegate:"), indexPath, NO, UICollectionViewScrollPositionCenteredHorizontally, NO);
         
         [self.transitionCoordinator animateAlongsideTransition:^(id<UIViewControllerTransitionCoordinatorContext>  _Nonnull context) {
             ActivityCollectionViewLayout *collectionViewLayout = [ActivityCollectionViewLayout new];
@@ -84,6 +84,9 @@ __attribute__((objc_direct_members))
             [collectionViewLayout release];
         }
                                                     completion:^(id<UIViewControllerTransitionCoordinatorContext>  _Nonnull context) {
+            // UICollectionView Transition이 작동하지 않아서 이렇게 처리
+            [self collectionView:collectionView didSelectItemAtIndexPath:indexPath];
+            
             ActivityImageCollectionViewCell *cell = [collectionView cellForItemAtIndexPath:indexPath];
             ActivityImageContentConfiguration *oldConfiguration = cell.contentConfiguration;
             ActivityImageContentConfiguration *newConfiguretion = [[ActivityImageContentConfiguration alloc] initWithFrame:collectionView.bounds imageName:oldConfiguration.imageName forPresenting:NO loadedImage:loadedImage isSelected:cell.isSelected];
