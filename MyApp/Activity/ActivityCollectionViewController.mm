@@ -171,7 +171,11 @@ __attribute__((objc_direct_members))
         [itemProvider release];
     }
     
-    metadata.title = [NSString stringWithFormat:@"%ld images selected", imageActivities.count];
+    if (imageActivities.count > 1) {
+        metadata.title = [NSString stringWithFormat:@"%ld images selected", imageActivities.count];
+    } else {
+        metadata.title = @"Image";
+    }
     
     linkView.metadata = metadata;
     [metadata release];
