@@ -95,6 +95,7 @@ __attribute__((objc_direct_members))
     toImageView.contentMode = UIViewContentModeScaleAspectFill;
     toImageView.clipsToBounds = YES;
     toImageView.layer.cornerRadius = ((CGFloat (*)(id, SEL))objc_msgSend)(self.view.window.screen, sel_registerName("_displayCornerRadius"));
+    toImageView.layer.cornerCurve = kCACornerCurveContinuous;
     
     [activityController.transitionCoordinator animateAlongsideTransitionInView:toImageView animation:^(id<UIViewControllerTransitionCoordinatorContext>  _Nonnull context) {
         fromImageView.hidden = YES;
